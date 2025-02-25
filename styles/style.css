@@ -22,9 +22,8 @@ html {
   font-style: normal;
   background-color: #1b1919;
   width: 100%;
-  
-
 }
+
 .visually-hidden {
   position: absolute;
   inline-size: 1px;
