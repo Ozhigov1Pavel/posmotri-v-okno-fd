@@ -21,7 +21,6 @@ html {
   font-weight: 400;
   font-style: normal;
   background-color: #1b1919;
-  width: 100%;
 }
 
 .visually-hidden {
@@ -74,7 +73,6 @@ ol {
   align-items: end;
   gap: 30px;
   inline-size: 1140px;
-  margin-bottom: 116px;
 }
 
 /* 5. Блок с видео */
@@ -216,7 +214,6 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox {
   justify-content: space-between;
   gap: 18px;
   width: 399px;
-  max-height: 536px;
 }
 
 .title {
@@ -225,7 +222,7 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox {
   font-size: 75px;
   line-height: 70.5px;
   text-transform: uppercase;
-  padding-top: 6px;
+
 }
 
 .content__accent {
@@ -236,6 +233,10 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox {
 .content__card-link {
   text-decoration: none;
   color: #ffffff;
+}
+
+.content__card-link_current {
+  background-color: #545050;
 }
 
 .content__card-link:hover {
@@ -266,18 +267,14 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox {
   text-overflow: ellipsis;
 }
 
-/* 12. Контейнер для списка городов */
+/* 12. Контейнер для списка городов фиксированный height: 298px; идет по инструкции */
 .content__list-container {
-  max-height: 566px;
+  height: 298px;
   overflow-y: auto;
   position: relative;
-  padding: 3px;
 }
 
-.content__card-link:focus-visible .content__video-card {
-  box-shadow: 0 0 0 1px white;
-  overflow: visible;
-}
+
 
 .content__video-card {
   display: flex;
@@ -296,9 +293,9 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox {
 }
 
 .content__list {
-      display: flex;
-      flex-direction: column;
-      row-gap: 29px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 29px;
 }
 
 .content__list-item:last-child {
