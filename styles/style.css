@@ -70,7 +70,7 @@ ol {
   display: grid;
   grid-template-columns: 711px 399px;
   grid-template-areas: "result details";
-  align-items: end;
+  place-items: end;
   gap: 30px;
   inline-size: 1140px;
 }
@@ -212,8 +212,9 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 18px;
+  gap: 21px;
   width: 399px;
+  height: 100%;
 }
 
 .title {
@@ -233,6 +234,7 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox {
 .content__card-link {
   text-decoration: none;
   color: #ffffff;
+  display: block;
 }
 
 .content__card-link_current {
@@ -269,24 +271,35 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox {
 
 /* 12. Контейнер для списка городов фиксированный height: 298px; идет по инструкции */
 .content__list-container {
-  height: 298px;
-  overflow-y: auto;
+  block-size: 298px;
+  overflow: auto;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 2px 3px 0 3px;
 }
 
+.content__card-link:focus {
+  outline: none;
+}
 
+.content__card-link:focus-visible {
+  outline: 1px #fff solid;
+  outline-offset: 1px;
+}
 
 .content__video-card {
   display: flex;
   justify-content: space-between;
 }
 
-.content__card-link:active .content__video-card {
+.content__card-link:active {
   background-color: rgba(84, 80, 80, 1);
 }
 
 .content__video-card-thumbnail {
-  width: 197px;
+  width: 194px;
   height: 103px;
   object-position: center;
   object-fit: cover;
@@ -298,10 +311,6 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox {
   row-gap: 29px;
 }
 
-.content__list-item:last-child {
-  margin-bottom: 32px;
-}
-
 .more-button {
   font: inherit;
   color: inherit;
@@ -309,6 +318,7 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox {
   width: 99%;
   height: 34px;
   background-color: transparent;
+  flex-shrink: 0;
 }
 
 button:hover {
