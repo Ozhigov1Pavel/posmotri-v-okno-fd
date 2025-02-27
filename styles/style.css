@@ -276,7 +276,7 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  padding: 3px 3px 0px 2px;
+  padding: 3px;
 }
 
 .content__card-link:focus {
@@ -317,7 +317,7 @@ input[type='checkbox']:checked + .search-form__pseudo-checkbox {
   line-height: 21.6px;
   color: inherit;
   border: 1px solid #fff;
-  width: 390px;
+  width: 389px;
   height: 34px;
   background-color: transparent;
   flex-shrink: 0;
